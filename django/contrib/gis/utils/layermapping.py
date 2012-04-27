@@ -454,6 +454,7 @@ class LayerMapping(object):
         """
         Saves the contents from the OGR DataSource Layer into the database
         according to the mapping dictionary given at initialization.
+        Returns the number of saved and processed features.
 
         Keyword Parameters:
          verbose:
@@ -598,4 +599,4 @@ class LayerMapping(object):
                     raise
         else:
             # Otherwise, just calling the previously defined _save() function.
-            _save()
+            return _save()
